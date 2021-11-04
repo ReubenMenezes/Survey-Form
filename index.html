@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeCamp Survey Form | Melody</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="supercenter">
+      <div class="card">
+        <h1 id="title">Melody</h1>
+
+        <p id="description">Buy instruments for cheap prices</p>
+        <form id="survey-form" class="form">
+          <div class="info-collection">
+            <label for="name" id="name-label"> Enter your name:</label>
+            <input
+              type="text"
+              name="name-collect"
+              id="name"
+              placeholder="John Doe"
+              autocomplete="off"
+              required
+            />
+            <label for="email" id="email-label"
+              >Enter your email address:</label
+            >
+            <input
+              type="email"
+              name="email-collect"
+              id="email"
+              placeholder="johndoe@example.com"
+              autocomplete="off"
+              required
+            />
+
+            <label for="dropdown">Select your instrument of choice:</label>
+            <select id="dropdown" name="dropdown" class="dropdown" required>
+              <option disabled selected value>Select instrument</option>
+              <option value="a-guitar">Acoustic Guitar</option>
+              <option value="e-guitar">Electronic Guitar</option>
+              <option value="c-guitar">Classical Guitar</option>
+              <option value="n-piano">Piano</option>
+              <option value="g-piano">Grand Piano</option>
+              <option value="keyboard">Keyboard</option>
+              <option value="violin">Violin</option>
+            </select>
+
+            <label for="number" id="number-label"
+              >Enter the number of instruments you would like to buy</label
+            >
+            <input
+              type="number"
+              name="instruments-number-collect"
+              id="number"
+              placeholder="1"
+              min="1"
+              max="20"
+              required
+            />
+
+            <fieldset>
+              <legend>Select the delivery time of your instruments</legend>
+              <div class="radio-group">
+                <label for="1d">One day</label>
+                <input type="radio" name="d-time" id="1d" value="1d" required />
+              </div>
+              <div class="radio-group">
+                <label for="1w">1 week</label>
+                <input type="radio" name="d-time" id="1w" value="1w" required />
+              </div>
+              <div class="radio-group">
+                <label for="1m">1 month</label>
+                <input type="radio" name="d-time" id="1m" value="1m" required />
+              </div>
+            </fieldset>
+
+            <!-- Resource for those struggling with Radio Button validation  😊
+    https://stackoverflow.com/questions/8287779/how-to-use-the-required-attribute-with-a-radio-input-field
+    
+    -->
+            <h2>Where did you find Melody?</h2>
+            <div class="check-group">
+              <label for="yt">YouTube</label>
+              <input type="checkbox" id="yt" value="youtube" />
+            </div>
+            <div class="check-group">
+              <label for="tw">Twitter</label>
+              <input type="checkbox" id="tw" value="twitter" />
+            </div>
+            <div class="check-group">
+              <label for="ig">Instagram</label>
+              <input type="checkbox" id="ig" value="instagram" />
+            </div>
+            <div class="check-group">
+              <label for="dc">Discord</label>
+              <input type="checkbox" id="dc" value="discord" />
+            </div>
+            <div class="check-group">
+              <label for="ad">Advertisments</label>
+              <input type="checkbox" id="ad" value="ads" />
+            </div>
+            <textarea
+              name="text-input"
+              id="textarea"
+              placeholder="Enter your comments"
+              cols="30"
+              rows="5"
+              minlength="20"
+              maxlength="100"
+              required
+            ></textarea>
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
